@@ -8,4 +8,4 @@ define("DB_NAME", "talkingroom");
 define("SITE_TITLE", "Welcome To TalkingRoom");
 
 //Paths
-define('BASE_URI', 'http://' . $_SERVER['SERVER_NAME'] . '/talkingroom/');
+define('BASE_URI', 'http://' . $_SERVER['SERVER_NAME'] . ':8888/talkingroom/');
