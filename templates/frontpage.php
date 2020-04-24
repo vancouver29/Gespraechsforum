@@ -8,9 +8,9 @@
                                 </div>
                                 <div class="col-md-10">
                                     <div class="topic-content float-right">
-                                        <h3><a href="topic.html">How did you learn CSS and HTML?</a></h3>
+                                        <h3><a href="topic.php">How did you learn CSS and HTML?</a></h3>
                                         <div class="topic-info">
-                                            <a href="category.html">Development</a> >> <a href="profile.html">Vancouver</a> >> Posted on: April 21 , 2020
+                                            <a href="category.php">Development</a> >> <a href="profile.php">Vancouver</a> >> Posted on: April 21 , 2020
                                             <span class="badge float-right">7</span>
                                         </div>
                                     </div>
@@ -24,9 +24,9 @@
                                 </div>
                                 <div class="col-md-10">
                                     <div class="topic-content float-right">
-                                        <h3><a href="topic.html">Google Panda - Who's affected?</a></h3>
+                                        <h3><a href="topic.php">Google Panda - Who's affected?</a></h3>
                                         <div class="topic-info">
-                                            <a href="category.html">Search Engines</a> >> <a href="profile.html">Vancouver</a> >> Posted on: April 22 , 2020
+                                            <a href="category.php">Search Engines</a> >> <a href="profile.php">Vancouver</a> >> Posted on: April 22 , 2020
                                             <span class="badge float-right">4</span>
                                         </div>
                                     </div>
@@ -40,9 +40,9 @@
                                 </div>
                                 <div class="col-md-10">
                                     <div class="topic-content float-right">
-                                        <h3><a href="topic.html">Is CSS 5 not working on Microsoft Edge ?</a></h3>
+                                        <h3><a href="topic.php">Is CSS 5 not working on Microsoft Edge ?</a></h3>
                                         <div class="topic-info">
-                                            <a href="category.html">Designs</a> >> <a href="profile.html">Vancouver</a> >> Posted on: April 23 , 2020
+                                            <a href="category.php">Designs</a> >> <a href="profile.php">Vancouver</a> >> Posted on: April 23 , 2020
                                             <span class="badge float-right">2</span>
                                         </div>
                                     </div>
@@ -56,9 +56,9 @@
                                 </div>
                                 <div class="col-md-10">
                                     <div class="topic-content float-right">
-                                        <h3><a href="topic.html">Best Web Application Frameworks</a></h3>
+                                        <h3><a href="topic.php">Best Web Application Frameworks</a></h3>
                                         <div class="topic-info">
-                                            <a href="category.html">Development</a> >> <a href="profile.html">Vancouver</a> >> Posted on: April 23 , 2020
+                                            <a href="category.php">Development</a> >> <a href="profile.php">Vancouver</a> >> Posted on: April 23 , 2020
                                             <span class="badge float-right">4</span>
                                         </div>
                                     </div>
