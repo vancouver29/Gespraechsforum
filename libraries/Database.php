@@ -12,7 +12,7 @@ class Database{
 
     public function __construct(){
         //Set DNS
-        $dns = 'mysql:host' . $this->host . ';dbname=' .$this->$this->dbname;
+        $dns = 'mysql:host' . $this->host . ';dbname=' .$this->dbname;
         //Set Options
         $option = array(
             //checking to see if there is already an established connection to the database.
@@ -29,7 +29,7 @@ class Database{
     }
 
     //Prepare query
-    function query($query){
+    public function query($query){
         $this->stmt = $this->dbh->prepare($query);
     }
 
@@ -51,15 +51,18 @@ class Database{
             }
         }
         $this->stmt->bindValue($param, $value, $type);
+//        $this->stmt->bindParam($param, $value, $type);
     }
 
     public function execute(){
-        return $this->stmt->execute();
+        var_dump($this->stmt);
+         return $this->stmt->execute;
     }
 
     //Returns an array of the result set rows
-    pubLic function resultSet(){
+    pubLic function resultset(){
         $this->execute();
+
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
@@ -76,7 +79,7 @@ class Database{
 
     //Last insert ID as String
     public function lastInsertId(){
-        return $this->dbh->listInsertId();
+        return $this->dbh->lastInsertId();
     }
 
     public function beginTransaction(){
