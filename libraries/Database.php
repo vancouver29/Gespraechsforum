@@ -56,7 +56,7 @@ class Database{
 
     public function execute(){
         var_dump($this->stmt);
-         return $this->stmt->execute;
+         return $this->stmt->execute();
     }
 
     //Returns an array of the result set rows
