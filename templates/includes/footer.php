@@ -29,7 +29,7 @@
                 <a href="#" class="list-group-item active">All Topics <span class="badge float-right">14</span></a>
                 <a href="#" class="list-group-item ">Design <span class="badge float-right">4</span></a>
                 <a href="#" class="list-group-item ">Development <span class="badge float-right">9</span></a>
-                <a href="#" class="list-grou p-item ">Business & Marketing <span class="badge float-right">12</span></a>
+                <a href="#" class="list-group-item ">Business & Marketing<span class="badge float-right">12</span></a>
                 <a href="#" class="list-group-item ">Search Engines <span class="badge float-right">7</span></a>
                 <a href="#" class="list-group-item ">Cloud & Hosting <span class="badge float-right">3</span></a>
             </div>
