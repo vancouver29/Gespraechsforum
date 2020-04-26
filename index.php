@@ -12,7 +12,5 @@ $template = new Template('templates/frontpage.php');
 //$template->heading = 'This is the template heading';
 $template->topics = $topic->getAllTopics();
 
-
-
 //Display template
 echo $template;

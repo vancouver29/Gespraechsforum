@@ -23,7 +23,7 @@ class Topic {
                         ORDER BY create_date DESC 
                         ");
         //Assign Result Set
-        $results = $this->db->resultset();
+        $results = $this->db->resultSet();
 
         return $results;
     }

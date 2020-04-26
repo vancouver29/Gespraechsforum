@@ -11,8 +11,8 @@ class Database{
     private $stmt;
 
     public function __construct(){
-        //Set DNS
-        $dns = 'mysql:host' . $this->host . ';dbname=' .$this->dbname;
+        //Set DSN
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' .$this->dbname;
         //Set Options
         $option = array(
             //checking to see if there is already an established connection to the database.
@@ -22,7 +22,8 @@ class Database{
         );
         //Create a new PDO instance
         try {
-            $this->dbh = new PDO($dns, $this->user, $this->pass, $option);
+            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
+            $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             $this->error = $e->getMessage();
         }
@@ -30,7 +31,7 @@ class Database{
 
     //Prepare query
     public function query($query){
-        $this->stmt = $this->dbh->prepare($query);
+        $this->stmt= $this->dbh->prepare($query);
     }
 
     //Bind inputs with the placeholders
@@ -55,14 +56,18 @@ class Database{
     }
 
     public function execute(){
-        var_dump($this->stmt);
-         return $this->stmt->execute();
+        try {
+            return $this->stmt->execute();
+
+        } catch (PDOException $e){
+            echo "Error: " . $e->getMessage();
+        }
+//         return $this->stmt->execute();
     }
 
     //Returns an array of the result set rows
-    pubLic function resultset(){
+    pubLic function resultSet(){
         $this->execute();
-
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
