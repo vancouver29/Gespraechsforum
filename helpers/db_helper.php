@@ -35,3 +35,26 @@ function getCategories(){
         echo "Error: " . $e->getMessage();
     }
 }
+
+/*
+ * User Posts
+ */
+function userPostCount($user_id){
+    $db = new Database();
+    $db->query('SELECT * FROM topics WHERE user_id = :user_id');
+    $db->bind(':user_id', $user_id);
+    //Assign Rows
+    $rows = $db->resultSet();
+    //Get Count
+    $topic_count = $db->rowCount();
+
+    $db->query('SELECT * FROM replies WHERE user_id = :user_id');
+    $db->bind('user_id', $user_id);
+    //Assign Rows
+    $rows = $db->resultSet();
+    //Get Count
+    $reply_count = $db->rowCount();
+
+    return $topic_count + $reply_count;
+
+}

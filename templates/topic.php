@@ -4,65 +4,46 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="user-info">
-                    <img class="avatar float-left" src="images/avatars1.jpg">
+                    <img class="avatar float-left" src="<?php echo BASE_URI; ?>images/avatars/<?php echo $topic->avatar;?>">
                     <ul>
-                        <li><strong>Vancouver</strong></li>
-                        <li>68 Posts</li>
-                        <li><a href="profile.php">Profile</a></li>
+                        <li><strong><?php echo $topic->username; ?></strong></li>
+                        <li><?php echo userPostCount($topic->user_id); ?> Posts</li>
+                        <li><a href="<?php echo BASE_URI; ?>topics.php?user=<?php echo $topic->user_id; ?>">Profile</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="col-md-10">
                 <div class="topic-content float-right">
-                    <p>i just worked in split mode in dreamweaver and paid attention to what was
-                        important.
-                        How did you learn CSS and HTML? How long did it take you until you were
-                        profil ?</p>
+                    <?php echo $topic->body; ?>
                 </div>
             </div>
         </div>
     </li>
+<!--------------------------------------------------- Replies to Topic -------------------------------------------->
+    <?php foreach ($replies as $reply): ?>
     <li class="topic topic">
         <div class="row">
             <div class="col-md-2">
                 <div class="user-info">
-                    <img class="avatar float-left" src="images/avatars1.jpg"/>
+                    <img class="avatar float-left" src="<?php echo BASE_URI; ?>images/avatars/<?php echo $reply->avatar; ?>">
                     <ul>
-                        <li><strong>Vancouver</strong></li>
-                        <li>68 Posts</li>
-                        <li><a href="profile.php">Profile</a></li>
+                        <li><strong><?php echo $reply->username; ?></strong></li>
+                        <li><?php echo userPostCount($reply->user_id); ?> Posts</li>
+                        <li><a href="<?php echo BASE_URI; ?>topics.php?user=<?php echo $reply->user_id; ?>">Profile</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="col-md-10">
                 <div class="topic-content float-right">
-                    <p>Congrats on how to make a href and inserting an image...
-                        You can learn HTM/CSS pretty fast, though how to use it in different scenarios in a whole other deal.
-                        I like to check out tutorials on how to implement the newest within htm/css (html5/css5).</p>
+                    <?php echo $reply->body; ?>
                 </div>
             </div>
         </div>
     </li>
-    <li class="topic topic">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="user-info">
-                    <img class="avatar float-left" src="images/avatars1.jpg"/>
-                    <ul>
-                        <li><strong>Vancouver</strong></li>
-                        <li>68 Posts</li>
-                        <li><a href="profile.php">Profile</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-10">
-                <div class="topic-content float-right">
-                    <p>w3schools is very good. I can't code an entire site, but i can hande basis syntax.</p>
-                </div>
-            </div>
-        </div>
-    </li>
+    <?php endforeach; ?>
+
 </ul>
 <h3>Reply to Topic </h3>
 <form role="form">

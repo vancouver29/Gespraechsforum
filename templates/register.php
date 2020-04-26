@@ -25,6 +25,7 @@
         <label>About Me</label>
         <textarea id="about" rows="6" cols="80" class="form-control" name="about"
                   placeholder="Tell us about yourself (Optional)"></textarea>
+        <script>CKEDITOR.replace('about')</script>
     </div>
     <input name="register" type="submit" class="btn btn-secondary" value="Register">
 </form>

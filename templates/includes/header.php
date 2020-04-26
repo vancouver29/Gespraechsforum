@@ -12,6 +12,8 @@
     <link href="<?php echo BASE_URI;?>templates/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="<?php echo BASE_URI;?>templates/css/custom.css" rel="stylesheet">
+    <!-- CKeditor for this template -->
+    <script src="templates/js/ckeditor/ckeditor.js"></script>
 
     <!-- Favicons -->
     <!--    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">-->
