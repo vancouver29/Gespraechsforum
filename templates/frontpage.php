@@ -14,7 +14,7 @@
                         <div class="topic-info">
                             <a href="topics.php?category=<?php echo urlFormat($topic->category_id); ?>"><?php echo $topic->name; ?></a> >>
                             <a href="topics.php?user=<?php echo urlFormat($topic->user_id); ?>"><?php echo $topic->username; ?></a> >>
-                            <?php echo formateDate($topic->create_date) ; ?>
+                            <?php echo formatDate($topic->create_date) ; ?>
                             <span class="badge float-right"><?php replyCount($topic->id); ?></span>
                         </div>
                     </div>
