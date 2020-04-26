@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="user-info">
-                    <img class="avatar float-left" src="img/no_imag.png">
+                    <img class="avatar float-left" src="images/avatars1.jpg">
                     <ul>
                         <li><strong>Vancouver</strong></li>
                         <li>68 Posts</li>
@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="user-info">
-                    <img class="avatar float-left" src="img/no_imag.png"/>
+                    <img class="avatar float-left" src="images/avatars1.jpg"/>
                     <ul>
                         <li><strong>Vancouver</strong></li>
                         <li>68 Posts</li>
@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="user-info">
-                    <img class="avatar float-left" src="img/no_imag.png"/>
+                    <img class="avatar float-left" src="images/avatars1.jpg"/>
                     <ul>
                         <li><strong>Vancouver</strong></li>
                         <li>68 Posts</li>

@@ -40,7 +40,12 @@
             }
         }
     </style>
-
+    <?php
+        //Check if title is set, if not assign it
+    if (!isset($title)) {
+        $title = SITE_TITLE;
+    }
+    ?>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -71,7 +76,7 @@
         <div class="col-md-8">
             <div class="main-col">
                 <div class="d-block">
-                    <h1 class="float-left">Welcome to TalkingRoom</h1>
+                    <h1 class="float-left"><?php echo $title; ?></h1>
                     <h4 class="float-right">A simple PHP forum engine</h4>
                     <div class="clearfix"></div>
                     <hr>
