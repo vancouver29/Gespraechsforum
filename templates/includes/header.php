@@ -82,3 +82,5 @@
                     <h4 class="float-right">A simple PHP forum engine</h4>
                     <div class="clearfix"></div>
                     <hr>
+
+                    <?php displayMessage(); ?>
