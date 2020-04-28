@@ -19,7 +19,7 @@ if (isset($_POST['register'])) {
     $data['password'] = md5($_POST['password']);
     $data['password2'] = md5($_POST['password2']);
     $data['about'] = $_POST['about'];
-    $data['last_activitiy'] = date("Y-m-d H:i:s");
+    $data['last_activitiy'] = date("Y-m-d H:j:s");
 
 // Required Fields
     $field_array = array('name','email','username','password','password2');

@@ -13,7 +13,12 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo BASE_URI;?>templates/css/custom.css" rel="stylesheet">
     <!-- CKeditor for this template -->
-    <script src="templates/js/ckeditor/ckeditor.js"></script>
+    <script src="<?php echo BASE_URI;?>templates/js/ckeditor/ckeditor.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script>window.jQuery </script>
 
     <!-- Favicons -->
     <!--    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">-->
@@ -59,15 +64,12 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto >
-            <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="register.php">Create an Account</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="create.php">Create an Topic</a>
-        </li>
+            <li class="nav-item active"><a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a></li>
+            <?php if (!isLoggedIn()): ?>
+                <li class="nav-item"><a class="nav-link" href="register.php">Create an Account</a></li>
+            <?php else: ?>
+                <li class="nav-item"><a class="nav-link" href="create.php">Create an Topic</a></li>
+            <?php endif; ?>
         </ul>
     </div>
 </nav>
