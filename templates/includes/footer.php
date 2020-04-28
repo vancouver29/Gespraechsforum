@@ -20,7 +20,7 @@
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
                 <button name="do_login" type="submit" class="btn btn-primary">Login</button>
-                <a class="btn btn-secondary" href="register.html">Create Account</a>
+                <a class="btn btn-secondary" href="register.php">Create Account</a>
             </form>
         </div>
         <div class="d-block">

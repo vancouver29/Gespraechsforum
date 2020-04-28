@@ -50,6 +50,6 @@ function displayMessage(){
         unset($_SESSION['message']);
         unset($_SESSION['message_type']);
     } else {
-        echo 'no message';
+        echo '';
     }
 }

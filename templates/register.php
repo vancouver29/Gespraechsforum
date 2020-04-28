@@ -17,6 +17,10 @@
         <input type="password" class="form-control" name="password" placeholder="Enter A Password">
     </div>
     <div class="form-group">
+        <label>Confirm Password*</label>
+        <input type="password" class="form-control" name="password2" placeholder="Enter Password Again">
+    </div>
+    <div class="form-group">
         <label>Upload Avatar</label>
         <input type="file" name="avatar">
         <p class="form-text"></p>
