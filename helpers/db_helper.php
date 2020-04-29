@@ -58,3 +58,45 @@ function userPostCount($user_id){
     return $topic_count + $reply_count;
 
 }
+
+/*
+ * Get Total Topics
+ */
+function getTotalTopicsHelper(){
+    try {
+        $db = new Database();
+
+        $db->query('SELECT * FROM topics');
+
+        $rows = $db->resultSet();
+
+        //Get Count
+        $topics_count = $db->rowCount();
+
+        return $topics_count;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
+
+/*
+ * Get Total Topics of Category
+ */
+function getTopicsOfCategoryHelper($category_id){
+    try {
+        $db = new Database();
+
+        $db->query('SELECT * FROM topics WHERE category_id = :category_id');
+        //Bind Value
+        $db->bind(':category_id', $category_id);
+        //Get Rows
+        $rows = $db->resultSet();
+
+        //Get Count
+        $topicsCategory_count = $db->rowCount();
+
+        return $topicsCategory_count;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}

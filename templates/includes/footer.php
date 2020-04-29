@@ -38,10 +38,11 @@
             <h3>Categories</h3>
             <div class="list-group">
                 <a href="topics.php" class="list-group-item" <?php echo is_active(null); ?>>All Topics<span
-                            class="badge float-right">14</span></a>
+                            class="badge float-right"><?php echo getTotalTopicsHelper(); ?></span></a>
                 <?php foreach (getCategories() as $category): ?>
                     <a href="topics.php?category=<?php echo $category->id; ?>"
-                       class="list-group-item " <?php echo is_active($category->id); ?>><?php echo $category->name; ?> </a>
+                       class="list-group-item " <?php echo is_active($category->id); ?>><?php echo $category->name; ?>
+                        <span class="badge float-right"><?php echo getTopicsOfCategoryHelper($category->id); ?></span></a>
                 <?php endforeach; ?>
             </div>
         </div>

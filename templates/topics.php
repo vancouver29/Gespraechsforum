@@ -14,7 +14,7 @@
                             <a href="topics.php?category=<?php echo urlFormat($topic->category_id); ?>"><?php echo $topic->name; ?></a> >>
                             <a href="topics.php?user=<?php echo urlFormat($topic->user_id); ?>"><?php echo $topic->username; ?></a> >>
                             <?php echo formatDate($topic->create_date) ; ?>
-                            <span class="badge float-right"><?php replyCount($topic->id); ?></span>
+                            <span class="badge float-right"><?php echo replyCount($topic->id); ?></span>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
 <?php endif; ?>
 <h3>Forum statistics</h3>
 <ul>
-    <li>Total Number of Users: <strong><? echo $totalUsers; ?></strong></li>
+    <li>Total Number of Users: <strong><?php echo $totalUsers; ?></strong></li>
     <li>Total Number of Topics: <strong><?php echo $totalTopics; ?></strong></li>
     <li>Total Number of Categories: <strong><?php echo $totalCategories; ?></strong></li>
 </ul>
