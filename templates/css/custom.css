@@ -136,3 +136,20 @@ a.list-group-item:hover {
 .user-info li {
     line-height: 1.6em;
 }
+
+
+body::after {
+    content: '';
+    display: block;
+    height: 50px; /* Set same as footer's height */
+}
+
+#sticky-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 2em;
+}
